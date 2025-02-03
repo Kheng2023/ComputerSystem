@@ -1,0 +1,14 @@
+push argument 0
+push argument 1
+call Sub.sub 2
+pop local 0
+label END
+goto END
+
+function Sub.sub 1
+push argument 0
+push argument 1
+sub
+pop local 1
+push local 1
+return

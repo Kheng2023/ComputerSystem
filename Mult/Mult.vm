@@ -1,0 +1,71 @@
+// Calculates a = x*y
+// a is a local variable
+// x & y are static variables
+
+// Put your code here.
+push constant 0
+pop local 0     //initialize a=0
+push constant 0
+pop temp 3      //initialize negative flag
+push static 0
+pop temp 0      //save x to temp 0
+push static 1
+pop temp 1      //save y to temp 1
+
+push temp 0 
+push constant 0
+gt
+if-goto CHECK_Y  //if x is positive goto CHECK_Y
+push temp 0
+neg
+pop temp 0
+push temp 3
+not
+pop temp 3 //set negative flag
+
+label CHECK_Y
+push temp 1
+push constant 0
+gt
+if-goto CHECKSWAP //if y is positive goto CHECKSWAP
+push temp 1
+neg
+pop temp 1
+push temp 3
+not
+pop temp 3
+
+label CHECKSWAP
+push temp 0
+push temp 1
+gt
+if-goto LOOP    //if x>y goto LOOP
+push temp 0
+push temp 1
+pop temp 0
+pop temp 1
+
+label LOOP
+push temp 1
+push constant 0
+eq
+if-goto CHECK_FLAG
+push temp 1
+push constant 1
+sub
+pop temp 1
+push local 0
+push temp 0
+add            //a+x
+pop local 0    //save to a
+goto LOOP
+
+label CHECK_FLAG
+push temp 3
+not
+if-goto END
+push local 0
+neg
+pop local 0
+label END
+goto END

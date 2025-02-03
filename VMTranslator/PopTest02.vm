@@ -1,0 +1,8 @@
+push constant 40
+pop this 1
+push constant 50
+pop that 1
+push constant 4000
+pop pointer 1
+label END
+goto END

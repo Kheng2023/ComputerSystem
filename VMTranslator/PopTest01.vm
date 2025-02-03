@@ -1,0 +1,10 @@
+push constant 1
+pop argument 0
+push constant 2
+pop local 0
+push constant 3
+pop static 0
+push constant 4
+pop temp 0
+label END
+goto END

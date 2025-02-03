@@ -1,0 +1,14 @@
+push constant 10
+push constant 20
+call subtract 2
+pop local 0
+label END
+goto END
+
+function subtract 1
+push argument 0
+push argument 1
+sub
+pop local 1
+push local 1
+return

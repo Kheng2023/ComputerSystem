@@ -1,0 +1,6 @@
+push constant 15
+push static 0
+push local 0
+push temp 0
+label END
+goto END

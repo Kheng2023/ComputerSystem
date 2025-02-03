@@ -1,0 +1,11 @@
+push constant 5
+call increment 1
+pop static 0
+label END
+goto END
+
+function increment 0
+push argument 0
+push constant 1
+add
+return
