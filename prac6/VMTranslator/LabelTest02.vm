@@ -1,0 +1,12 @@
+label LOOP
+push static 0
+push constant 1
+add
+pop static 0
+push static 0
+push constant 5
+eq
+if-goto END
+goto LOOP
+END
+goto END

@@ -1,0 +1,12 @@
+push constant 10
+push constant 5
+call Add.add 2
+pop static 0
+label END
+goto END
+
+function Add.add 0
+push argument 0
+push argument 1
+add
+return

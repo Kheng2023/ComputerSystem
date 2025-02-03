@@ -1,0 +1,8 @@
+push constant 5
+push constant 5
+eq
+if-goto END
+push constant 1
+pop static 0
+label END
+goto END

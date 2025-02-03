@@ -1,0 +1,6 @@
+push constant 12
+push constant 13
+or
+pop static 0
+label END
+goto END

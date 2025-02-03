@@ -1,0 +1,6 @@
+push pointer 1
+push argument 1
+push that 1
+push this 1
+label END
+goto END
